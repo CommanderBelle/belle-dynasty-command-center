@@ -1,1 +1,109 @@
+/* ===== Global Layout ===== */
+body.deck-body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #050505;
+  color: #f5f5f5;
+}
 
+/* ===== Header / Title Bar ===== */
+.deck-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #333;
+  background: radial-gradient(circle at top left, #222 0%, #050505 60%);
+}
+
+.deck-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.deck-logo {
+  font-size: 1.8rem;
+  margin-bottom: 0.25rem;
+}
+
+.deck-title h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f5d26a;
+}
+
+.deck-subtitle {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #c0c0c0;
+}
+
+/* ===== Navigation ===== */
+.deck-nav {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid #444;
+  color: #f5f5f5;
+  background: linear-gradient(135deg, #111, #1b1b1b);
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  border-color: #f5d26a;
+  color: #f5d26a;
+  box-shadow: 0 0 12px rgba(245, 210, 106, 0.4);
+}
+
+.nav-link.active {
+  border-color: #f5d26a;
+  background: linear-gradient(135deg, #2a1f08, #111);
+  color: #f5d26a;
+}
+
+/* ===== Main Deck Container ===== */
+.deck-main {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+  gap: 1.5rem;
+  padding: 1.5rem 2rem 2rem;
+}
+
+/* ===== Panels ===== */
+.panel {
+  border-radius: 12px;
+  border: 1px solid #333;
+  background: radial-gradient(circle at top, #181818 0%, #050505 60%);
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.7);
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.panel-title {
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #f5d26a;
+}
+
+.panel-tag {
+  font-size: 0.75rem;
+  padding
