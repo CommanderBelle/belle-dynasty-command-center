@@ -1,1 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Master Command Deck</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="deck-body">
+  <!-- Header -->
+  <header class="deck-header">
+    <div class="deck-title">
+      <span class="deck-logo">🛡️</span>
+      <h1>Master Command Deck</h1>
+      <p class="deck-subtitle">Central Operations Console</p>
+    </div>
+
+    <nav class="deck-nav">
+      <a href="master_command_deck.html" class="nav-link active">Home Deck</a>
+      <a href="switchboard.html" class="nav-link">Switchboard</a>
+      <a href="job_seeker.html" class="nav-link">Job Seeker Console</a>
+    </nav>
+  </header>
+
+  <!-- Main Layout -->
+  <main class="deck-main">
+    <!-- Left Panel -->
+    <section class="panel panel-status">
+      <h2>System Status</h2>
+
+      <div class="status-grid">
+        <div class="status-card">
+          <h3>Deployment</h3>
+          <p class="status-label">Netlify Status:</p>
+          <p class="status-value status-ok">READY</p>
+        </div>
+
+        <div class="status-card">
+          <h3>Simulation Engine</h3>
+          <p class="status-label">Mode:</p>
+          <p class="status-value status-warn">STANDBY</p>
+        </div>
+
+        <div class="status-card">
+          <h3>Dark Ops</h3>
+          <p class="status-label">Visibility:</p>
+          <p class="status-value status-stealth">STEALTH</p>
+        </div>
+      </div>
+
+      <h2>Live Telemetry</h2>
+      <div class="telemetry-grid">
+        <div class="telemetry-item">
+          <span class="telemetry-label">Command Uptime</span>
+          <span class="telemetry-value">00:00:00</span>
+        </div>
+        <div class="telemetry-item">
+          <span class="telemetry-label">Active Modules</span>
+          <span class="telemetry-value">3</span>
+        </div>
+        <div class="telemetry-item">
+          <span class="telemetry-label">Signal Integrity</span>
+          <span class="telemetry-value">100%</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Right Panel -->
+    <section class="panel panel-controls">
+      <h2>Commander Controls</h2>
+
+      <div class="control-group">
+        <h3>Deck Navigation</h3>
+        <div class="button-row">
+          <button class="btn primary" onclick="goTo('switchboard.html')">Open Switchboard</button>
+          <button class="btn secondary" onclick="goTo('job_seeker.html')">Open Job Seeker Console</button>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <h3>Simulation Engine</h3>
+        <p class="control-desc">Trigger a mock simulation event to test the Command Deck interface.</p>
+
+        <div class="button-row">
+          <button class="btn accent" onclick="triggerSimulation()">Run Simulation Pulse</button>
+          <button class="btn ghost" onclick="clearLog()">Clear Event Log</button>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <h3>Event Log</h3>
+        <div id="event-log" class="event-log">
+          <p class="log-line log-system">[SYSTEM] Command Deck initialized. Awaiting orders, Commander.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="deck-footer">
+    <p>Master Command Deck · Local Ops Console</p>
+  </footer>
+
+  <!-- Simulation Engine -->
+  <script src="simulation_engine.js"></script>
+
+  <script>
+    function goTo(path) {
+      window.location.href = path;
+    }
+
+    function triggerSimulation() {
+      const log = document.getElementById("event-log");
+      const line = document.createElement("p");
+      line.className = "log-line log-event";
+      const ts = new Date().toLocaleTimeString();
+      line.textContent = `[SIM] Pulse executed @ ${ts}`;
+      log.appendChild(line);
+      log.scrollTop = log.scrollHeight;
+    }
+
+    function clearLog() {
+      const log = document.getElementById("event-log");
+      log.innerHTML = "";
+      const base = document.createElement("p");
+      base.className = "log-line log-system";
+      base.textContent = "[SYSTEM] Log cleared. Standing by.";
+      log.appendChild(base);
+    }
+  </script>
+</body>
+</html>
 
