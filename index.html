@@ -2,6 +2,165 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>Belle Dynasty Command Center</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="deck-body">
+
+  <header class="deck-header">
+    <div class="deck-title">
+      <span class="deck-logo">🛡️</span>
+      <h1>Belle Dynasty Command Center</h1>
+      <p class="deck-subtitle">Central Operations Console</p>
+    </div>
+
+    <nav class="deck-nav">
+      <a href="#" class="nav-link active" data-panel="operations">Operations</a>
+      <a href="#" class="nav-link" data-panel="intel">Intel</a>
+      <a href="#" class="nav-link" data-panel="systems">Systems</a>
+      <a href="#" class="nav-link" data-panel="comms">Comms</a>
+      <a href="#" class="nav-link" data-panel="alerts">Alerts</a>
+    </nav>
+  </header>
+
+  <main class="deck-main">
+
+    <!-- OPERATIONS PANEL -->
+    <section class="panel" id="operations" data-active="true">
+      <div class="panel-header">
+        <span class="panel-title">Operations Module</span>
+        <span class="panel-tag">LIVE</span>
+      </div>
+
+      <div class="module-grid">
+        <div class="module-card">
+          <span class="module-title">Field Ops</span>
+          <span class="module-meta">Deployment Status</span>
+        </div>
+
+        <div class="module-card">
+          <span class="module-title">HQ Ops</span>
+          <span class="module-meta">Internal Systems</span>
+        </div>
+      </div>
+
+      <div class="command-row">
+        <button class="command-button primary">Activate Ops</button>
+        <button class="command-button">Diagnostics</button>
+      </div>
+    </section>
+
+    <!-- INTEL PANEL -->
+    <section class="panel" id="intel">
+      <div class="panel-header">
+        <span class="panel-title">Intel Module</span>
+        <span class="panel-tag">STANDBY</span>
+      </div>
+
+      <div class="module-grid">
+        <div class="module-card">
+          <span class="module-title">Recon</span>
+          <span class="module-meta">Field Data</span>
+        </div>
+
+        <div class="module-card">
+          <span class="module-title">Analysis</span>
+          <span class="module-meta">Processing</span>
+        </div>
+      </div>
+
+      <div class="command-row">
+        <button class="command-button primary">Sync Intel</button>
+        <button class="command-button">Refresh</button>
+      </div>
+    </section>
+
+    <!-- SYSTEMS PANEL -->
+    <section class="panel" id="systems">
+      <div class="panel-header">
+        <span class="panel-title">Systems Module</span>
+        <span class="panel-tag">ONLINE</span>
+      </div>
+
+      <div class="module-grid">
+        <div class="module-card">
+          <span class="module-title">Power Grid</span>
+          <span class="module-meta">Stable</span>
+        </div>
+
+        <div class="module-card">
+          <span class="module-title">Core Loop</span>
+          <span class="module-meta">Nominal</span>
+        </div>
+      </div>
+
+      <div class="command-row">
+        <button class="command-button primary">Reboot Systems</button>
+        <button class="command-button">Check Logs</button>
+      </div>
+    </section>
+
+    <!-- COMMS PANEL -->
+    <section class="panel" id="comms">
+      <div class="panel-header">
+        <span class="panel-title">Communications Module</span>
+        <span class="panel-tag">ACTIVE</span>
+      </div>
+
+      <div class="module-grid">
+        <div class="module-card">
+          <span class="module-title">Uplink</span>
+          <span class="module-meta">Connected</span>
+        </div>
+
+        <div class="module-card">
+          <span class="module-title">Downlink</span>
+          <span class="module-meta">Stable</span>
+        </div>
+      </div>
+
+      <div class="command-row">
+        <button class="command-button primary">Ping Network</button>
+        <button class="command-button">Trace Route</button>
+      </div>
+    </section>
+
+    <!-- ALERTS PANEL -->
+    <section class="panel" id="alerts">
+      <div class="panel-header">
+        <span class="panel-title">Alerts Module</span>
+        <span class="panel-tag">MONITORING</span>
+      </div>
+
+      <div class="module-grid">
+        <div class="module-card">
+          <span class="module-title">System Alerts</span>
+          <span class="module-meta">0 Active</span>
+        </div>
+
+        <div class="module-card">
+          <span class="module-title">Security Alerts</span>
+          <span class="module-meta">0 Active</span>
+        </div>
+      </div>
+
+      <div class="command-row">
+        <button class="command-button primary">Run Sweep</button>
+        <button class="command-button">Clear Alerts</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
   <title>Master Command Deck</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
